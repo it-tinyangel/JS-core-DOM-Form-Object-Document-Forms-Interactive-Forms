@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles/style.css">
+	<title>Interactive Forms</title>
+</head>
+
+<body>
+	<section>
+		<h2>Task Move</h2>
+		<p>A value is moved from one input to another only if there is a value there.</p>
+		<form name="formMove">
+			<div class="form form-move">
+				<input type="text" id="getData" name="getData" value="">
+				<input type="button" onclick="moveText()" value="move">
+				<input type="text" name="putData" id="putData" value="">
+			</div>
+		</form>
+	</section>
+
+	<section>
+		<h2>Task Placeholder</h2>
+		<p>The value is moved to the placeholder only if there is a value there.</p>
+		<form name="formPlaceholder">
+			<div class="form form-placeholder">
+				<input type="text" onblur="setPlaceholder()" id="setData" name="setData">
+			</div>
+		</form>
+	</section>
+
+	<script src="js/script.js"></script>
+</body>
+
+</html>

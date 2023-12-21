@@ -1,0 +1,88 @@
+:root {
+	--main-width: 800px;
+	--main-font: 1em 'Roboto', sans-serif;
+	--input-border-color: rgb(135, 205, 255);
+	--button-color: rgb(0, 158, 0);
+	--button-color-hover: green;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+body {
+	padding: 0.5em;
+	font: var(--main-font);
+	color: #000;
+	background: #fff;
+}
+
+section {
+	margin: 2.25rem auto;
+	width: var(--main-width);
+}
+
+p {
+	margin: .75rem 0 1.25rem;
+}
+
+input {
+	width: 100%;
+	padding: 0 10px;
+	font: var(--main-font);
+	appearance: none;
+	outline: none;
+	border: none;
+	border-radius: 0.25rem;
+	border: 1px solid lightslategray;
+	color: dimgray;
+	background: none;
+	background-color: transparent;
+	transition: 0.2s ease;
+}
+
+input[type="button"] {
+	border: none;
+	color: #fff;
+	background-color: var(--button-color);
+}
+
+input:is(:hover, :focus) {
+	border-radius: 0.25rem;
+	cursor: pointer;
+}
+
+input:not(input[type="button"]):is(:hover, :focus) {
+	border: 1.25px solid var(--input-border-color);
+	box-shadow: 0 0 5px 2px var(--input-border-color);
+}
+
+input:is(input[type="button"]):is(:hover, :focus) {
+	background-color: var(--button-color-hover);
+}
+
+input:focus:is(input[type="button"]) {
+	border-radius: 0.25rem;
+	border: 1.25px solid var(--button-color);
+	box-shadow: 0 0 3px 1px rgb(186, 255, 186), 0 0 3px 2px rgb(90 160 90);
+}
+
+.form {
+	margin: 0 auto;
+	width: var(--main-width);
+	position: relative;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-rows: 2em;
+}
+
+.form-move {
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.form-placeholder {
+	grid-template-columns: repeat(1, 1fr);
+}
