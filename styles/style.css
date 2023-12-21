@@ -57,7 +57,7 @@ input:is(:hover, :focus) {
 
 input:not(input[type="button"]):is(:hover, :focus) {
 	border: 1.25px solid var(--input-border-color);
-	box-shadow: 0 0 5px 2px var(--input-border-color);
+	box-shadow: 0 0 3px 2px var(--input-border-color);
 }
 
 input:is(input[type="button"]):is(:hover, :focus) {
