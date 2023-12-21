@@ -4,7 +4,7 @@ function moveText() {
 	let inputFirst = formMove.elements['getData'];
 	let inputSecond = formMove.elements['putData'];
 
-	inputSecond.value = inputFirst.value !== '' ? inputFirst.value : inputSecond.value;
+	inputSecond.value = (inputFirst.value !== '' ? inputFirst.value : inputSecond.value), inputFirst.value = '';
 }
 
 // Set Placeholder from Input Value
