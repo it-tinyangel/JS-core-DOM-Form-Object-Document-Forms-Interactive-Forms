@@ -40,7 +40,6 @@ input {
 	border: none;
 	border-radius: 0.25rem;
 	border: 1px solid lightslategray;
-	color: dimgray;
 	background-color: transparent;
 }
 
@@ -83,4 +82,8 @@ input[type="button"]:focus {
 
 .form-placeholder {
 	grid-template-columns: repeat(1, 1fr);
+}
+
+input::placeholder {
+	color: gray;
 }
