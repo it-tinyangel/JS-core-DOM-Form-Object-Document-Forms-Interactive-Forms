@@ -1,7 +1,9 @@
 :root {
 	--main-width: 800px;
 	--main-font: 1em 'Roboto', sans-serif;
-	--input-border-color: rgb(135, 205, 255);
+
+	--main-white-color: #fff;
+	--input-border-color: rgb(200, 225, 255);
 	--button-color: rgb(0, 158, 0);
 	--button-color-hover: green;
 }
@@ -17,7 +19,7 @@ body {
 	padding: 0.5em;
 	font: var(--main-font);
 	color: #000;
-	background: #fff;
+	background-color: var(--main-white-color);
 }
 
 section {
@@ -39,41 +41,37 @@ input {
 	border-radius: 0.25rem;
 	border: 1px solid lightslategray;
 	color: dimgray;
-	background: none;
 	background-color: transparent;
-	transition: 0.2s ease;
+}
+
+input:not([type="button"]):is(:hover, :focus) {
+	border: 1.25px solid var(--input-border-color);
+	box-shadow: 0 0 3px 2px var(--input-border-color);
+	transition: all 0.2s ease;
 }
 
 input[type="button"] {
-	border: none;
-	color: #fff;
+	border: 1.25px solid var(--button-color);
+	color: var(--main-white-color);
 	background-color: var(--button-color);
 }
 
-input:is(:hover, :focus) {
-	border-radius: 0.25rem;
-	cursor: pointer;
-}
-
-input:not(input[type="button"]):is(:hover, :focus) {
-	border: 1.25px solid var(--input-border-color);
-	box-shadow: 0 0 3px 2px var(--input-border-color);
-}
-
-input:is(input[type="button"]):is(:hover, :focus) {
+input[type="button"]:is(:hover, :focus) {
+	border: 1.25px solid var(--button-color-hover);
 	background-color: var(--button-color-hover);
+	transition: all 0.2s ease;
 }
 
-input:focus:is(input[type="button"]) {
+input[type="button"]:focus {
 	border-radius: 0.25rem;
 	border: 1.25px solid var(--button-color);
 	box-shadow: 0 0 3px 1px rgb(186, 255, 186), 0 0 3px 2px rgb(90 160 90);
+	transition: all 0.2s ease;
 }
 
 .form {
 	margin: 0 auto;
 	width: var(--main-width);
-	position: relative;
 	display: grid;
 	grid-gap: 20px;
 	grid-template-rows: 2em;
